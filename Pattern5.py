@@ -1,35 +1,23 @@
-rows = 5
-i = 1
-while i <= rows:
-    j = rows
-    while j > i:
-        # display space
-        print(' ', end=' ')
-        j -= 1
-    print('*', end=' ')
-    k = 1
-    while k < 2 * (i - 1):
-        print(' ', end=' ')
-        k += 1
-    if i == 1:
-        print()
-    else:
-        print('*')
-    i += 1
+row = int(input('Enter number of row: '))
 
-i = rows - 1
-while i >= 1:
-    j = rows
-    while j > i:
-        print(' ', end=' ')
-        j -= 1
-    print('*', end=' ')
-    k = 1
-    while k <= 2 * (i - 1):
-        print(' ', end=' ')
-        k += 1
-    if i == 1:
-        print()
-    else:
-        print('*')
-    i -= 1
+# Upper part of hollow diamond
+for i in range(1, row+1):
+    for j in range(1,row-i+1):
+        print(" ", end="")
+    for j in range(1, 2*i):
+        if j==1 or j==2*i-1:
+            print("*", end="")
+        else:
+            print(" ", end="")
+    print()
+
+# Lower part of hollow diamond
+for i in range(row-1,0, -1):
+    for j in range(1,row-i+1):
+        print(" ", end="")
+    for j in range(1, 2*i):
+        if j==1 or j==2*i-1:
+            print("*", end="")
+        else:
+            print(" ", end="")
+    print()
