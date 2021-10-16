@@ -1,5 +1,7 @@
 row = int(input('Enter number of row: '))
 
+print('\n')
+
 # Upper part of hollow diamond
 for i in range(1, row+1):
     for j in range(1,row-i+1):
